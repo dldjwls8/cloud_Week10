@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}메인 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>{{ project.title }}</h2>
+    <p class="lead">건물 내 위치 안내, 혼잡도 시각화, 장애인 경로 추천을 제공하는 스마트 실내 네비게이션 시스템</p>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <div class="card-icon">📝</div>
+        <h3>작품 주제</h3>
+        <p>프로젝트의 목표와 주제를 소개합니다</p>
+        <a href="/subject" class="btn">자세히 보기 →</a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">💡</div>
+        <h3>실용적 근거</h3>
+        <p>프로젝트의 필요성과 실용적 가치를 설명합니다</p>
+        <a href="/rationale" class="btn">자세히 보기 →</a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>핵심 기능</h3>
+        <p>시스템의 주요 기능들을 확인하세요</p>
+        <a href="/features" class="btn">자세히 보기 →</a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>구현 환경</h3>
+        <p>개발에 사용된 기술 스택과 도구들</p>
+        <a href="/environment" class="btn">자세히 보기 →</a>
+    </div>
+
+    <div class="card">
+        <div class="card-icon">👥</div>
+        <h3>팀 구성</h3>
+        <p>팀원들의 역할과 담당 업무를 소개합니다</p>
+        <a href="/team" class="btn">자세히 보기 →</a>
+    </div>
+</div>
+
+<div class="info-box">
+    <h3>📡 API 사용 안내</h3>
+    <p>본 프로젝트의 데이터는 JSON API를 통해 제공됩니다. 아래 엔드포인트를 통해 접근할 수 있습니다:</p>
+    <ul class="api-list">
+        <li><code>GET /api/subject</code> - 작품 주제 정보</li>
+        <li><code>GET /api/rationale</code> - 실용적 근거 정보</li>
+        <li><code>GET /api/features</code> - 핵심 기능 목록</li>
+        <li><code>GET /api/environment</code> - 구현 환경 정보</li>
+        <li><code>GET /api/team</code> - 팀 구성 정보</li>
+        <li><code>GET /api/all</code> - 전체 데이터</li>
+    </ul>
+</div>
+{% endblock %}

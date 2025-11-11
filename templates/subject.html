@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}작품 주제 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>📝 {{ subject.title }}</h2>
+</div>
+
+<div class="content-box">
+    <div class="section">
+        <h3>프로젝트 주제</h3>
+        <p class="highlight">{{ subject.topic }}</p>
+    </div>
+
+    <div class="section">
+        <h3>한 줄 요약</h3>
+        <p>{{ subject.summary }}</p>
+    </div>
+
+    <div class="section">
+        <h3>프로젝트 목표</h3>
+        <p>{{ subject.goal }}</p>
+    </div>
+</div>
+
+<div class="navigation-buttons">
+    <a href="/" class="btn btn-secondary">← 홈으로</a>
+    <a href="/rationale" class="btn btn-primary">실용적 근거 →</a>
+</div>
+{% endblock %}

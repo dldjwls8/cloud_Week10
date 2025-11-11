@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}핵심 기능 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>⚙️ {{ features.title }}</h2>
+</div>
+
+<div class="features-grid">
+    {% for feature in features.list %}
+    <div class="feature-card">
+        <div class="feature-number">{{ loop.index }}</div>
+        <h3>{{ feature.name }}</h3>
+        <p>{{ feature.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="navigation-buttons">
+    <a href="/rationale" class="btn btn-secondary">← 실용적 근거</a>
+    <a href="/environment" class="btn btn-primary">구현 환경 →</a>
+</div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}구현 환경 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>🖥️ {{ environment.title }}</h2>
+</div>
+
+<div class="environment-grid">
+    <div class="env-card">
+        <h3>💻 개발 언어</h3>
+        <ul>
+            {% for lang in environment.languages %}
+            <li>{{ lang }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="env-card">
+        <h3>🎨 프레임워크</h3>
+        <ul>
+            {% for framework in environment.frameworks %}
+            <li>{{ framework }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="env-card">
+        <h3>💾 데이터베이스</h3>
+        <ul>
+            {% for db in environment.database %}
+            <li>{{ db }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="env-card">
+        <h3>🚀 배포 환경</h3>
+        <ul>
+            {% for deploy in environment.deployment %}
+            <li>{{ deploy }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="env-card">
+        <h3>🔧 개발 도구</h3>
+        <ul>
+            {% for tool in environment.tools %}
+            <li>{{ tool }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="env-card">
+        <h3>🌐 외부 API</h3>
+        <ul>
+            {% for api in environment.apis %}
+            <li>{{ api }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="navigation-buttons">
+    <a href="/features" class="btn btn-secondary">← 핵심 기능</a>
+    <a href="/team" class="btn btn-primary">팀 구성 →</a>
+</div>
+{% endblock %}

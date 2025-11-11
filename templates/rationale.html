@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}실용적 근거 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>💡 {{ rationale.title }}</h2>
+</div>
+
+<div class="content-box">
+    <div class="section">
+        <h3>🔍 문제 인식</h3>
+        <p>{{ rationale.problem }}</p>
+    </div>
+
+    <div class="section">
+        <h3>🌍 사회적 필요성</h3>
+        <p>{{ rationale.social_need }}</p>
+    </div>
+
+    <div class="section">
+        <h3>🔧 기술적 필요성</h3>
+        <p>{{ rationale.technical_need }}</p>
+    </div>
+
+    <div class="section">
+        <h3>💎 실용적 가치</h3>
+        <p>{{ rationale.practical_value }}</p>
+    </div>
+</div>
+
+<div class="navigation-buttons">
+    <a href="/subject" class="btn btn-secondary">← 작품 주제</a>
+    <a href="/features" class="btn btn-primary">핵심 기능 →</a>
+</div>
+{% endblock %}

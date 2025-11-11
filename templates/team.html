@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}팀 구성 - 캡스톤 프로젝트{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>👥 {{ team.title }}</h2>
+</div>
+
+<div class="team-grid">
+    {% for member in team.members %}
+    <div class="team-card">
+        <div class="member-avatar">{{ loop.index }}</div>
+        <h3>{{ member.name }}</h3>
+        <p class="role">{{ member.role }}</p>
+        <div class="responsibilities">
+            <h4>담당 업무</h4>
+            <ul>
+                {% for responsibility in member.responsibilities %}
+                <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <p class="contact">📧 {{ member.contact }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="collaboration-box">
+    <h3>🤝 협업 방식</h3>
+    <p>{{ team.collaboration }}</p>
+</div>
+
+<div class="navigation-buttons">
+    <a href="/environment" class="btn btn-secondary">← 구현 환경</a>
+    <a href="/" class="btn btn-primary">홈으로 →</a>
+</div>
+{% endblock %}

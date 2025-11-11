@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}캡스톤 프로젝트{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🏢 실내 네비게이션 시스템</h1>
+            <p class="subtitle">캡스톤 디자인 프로젝트</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="/" class="{% if request.endpoint == 'main' %}active{% endif %}">홈</a>
+            <a href="/subject" class="{% if request.endpoint == 'subject' %}active{% endif %}">작품주제</a>
+            <a href="/rationale" class="{% if request.endpoint == 'rationale' %}active{% endif %}">실용적 근거</a>
+            <a href="/features" class="{% if request.endpoint == 'features' %}active{% endif %}">핵심기능</a>
+            <a href="/environment" class="{% if request.endpoint == 'environment' %}active{% endif %}">구현환경</a>
+            <a href="/team" class="{% if request.endpoint == 'team' %}active{% endif %}">팀원 구성</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 캡스톤 디자인 프로젝트. All rights reserved.</p>
+            <p class="api-info">
+                API 엔드포인트: 
+                <a href="/api/subject">/api/subject</a> | 
+                <a href="/api/rationale">/api/rationale</a> | 
+                <a href="/api/features">/api/features</a> | 
+                <a href="/api/environment">/api/environment</a> | 
+                <a href="/api/team">/api/team</a> |
+                <a href="/api/all">/api/all</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
