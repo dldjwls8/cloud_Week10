@@ -7,6 +7,7 @@ WORKDIR /app
 # 시스템 패키지 업데이트 및 필요한 도구 설치
 RUN apt-get update && apt-get install -y \
     gcc \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # requirements.txt를 먼저 복사하여 레이어 캐싱 활용
