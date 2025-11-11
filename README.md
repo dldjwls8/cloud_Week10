@@ -28,8 +28,8 @@ Flask 기반 프로젝트 소개 웹 (EC2 + Docker, 또는 로컬)
 
 - Front-End(프론트엔드): HTML5, CSS3, Jinja2
 - Back-End(백엔드): Flask, JSON 데이터 관리
-- Runtime(런타임): Python 3.x
-- Deploy(배포): Docker Compose / AWS EC2 / (선택) AWS ECS
+- Runtime(런타임): Python 3.11
+- Deploy(배포): 로컬 / AWS EC2
 
 **실제 게임 개발 환경**
 - 언어: C# 10.0
@@ -50,7 +50,7 @@ Flask 기반 프로젝트 소개 웹 (EC2 + Docker, 또는 로컬)
 
 ```bash
 docker compose up --build -d
-# http://localhost:포트번호 < 프로젝트명 맞는 포트 또는 배포된 public IP >
+# http://43.201.36.9/
 ```
 
 ## API 엔드포인트
